@@ -29,12 +29,11 @@ ps_plot <- exposure_plot %>%
   ggplot2::geom_density(alpha = .5) +
   ggplot2::theme_bw() +
   ggplot2::labs(
-    title = "Propensity score overlap",
     x = "Pr(exposure)",
     y = "Density",
     fill = "Exposed"
     )
 
 png(filename = here("figures", "Figure_1_propensity_score_overlap.png"), width = 15, height = 10, units = "in", res=600)
-ps_plot
+ps_plot + ggplot2::theme(plot.title=element_text(size=70))
 dev.off()
