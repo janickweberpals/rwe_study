@@ -29,7 +29,7 @@ ps_plot <- exposure_plot %>%
   ggplot2::geom_density(alpha = .5) +
   ggplot2::theme_bw() +
   ggplot2::labs(
-    #title = "Propensity score overlap",
+    title = "Propensity score overlap",
     x = "Pr(exposure)",
     y = "Density",
     fill = "Exposed"
