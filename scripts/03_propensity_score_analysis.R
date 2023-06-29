@@ -6,7 +6,9 @@ library(here)
 
 # load pre-queried and cleaned cohort data (smdi_data)
 data <- smdi_data_complete
-  
+
+# TEST CHANGES MADE IN LASSO_VARIABLE_SELECTION BRANCH
+
 # step 1: compute propensity of exposure assignment
 exposure_form <- as.formula(paste("exposure ~ ", paste(colnames(data %>% dplyr::select(-exposure)), collapse = " + ")))
 
